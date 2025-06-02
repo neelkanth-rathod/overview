@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // If all validations pass, proceed to payment
         alert('Booking submitted successfully!');
-        // In a real app, you would redirect to payment page or process payment here
     });
     
     function showError(input, message) {
@@ -123,8 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         e.target.value = value;
     });
-    
-    // Format expiry date input
     const expiryDate = document.getElementById('expiryDate');
     
     expiryDate.addEventListener('input', function(e) {
@@ -135,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.target.value = value;
     });
     
-    // Back button functionality
+    // Back button function will do better tasks.
     const backBtn = document.querySelector('.back-btn');
     
     backBtn.addEventListener('click', function() {
@@ -143,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'index.html';
     });
     
-    // Mobile menu toggle
+    // Mobile menu that change be toggle.
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const authButtons = document.querySelector('.auth-buttons');
