@@ -1,12 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
+main
+    // Payment method selection for the webpage
+    const paymentMethods = document.querySelectorAll('.payment-method');
+    
+    paymentMethods.forEach(method => {
+        method.addEventListener('click', function() {
+            paymentMethods.forEach(m => m.classList.remove('active'));
+            this.classList.add('active');
+        });
+
     // Toggle hamburger menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('open');
+main
     });
     
-    // Form validation
+    // Form validation requiried for the processes
     const form = document.getElementById('passengerForm');
     
     form.addEventListener('submit', function(e) {
@@ -53,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Validate payment info if credit card is selected
+        // Validate payment 
         const activePayment = document.querySelector('.payment-method.active');
         
         if (activePayment && activePayment.textContent.includes('Credit Card')) {

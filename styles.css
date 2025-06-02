@@ -1,4 +1,8 @@
+main
+/* this is the page where you acan get all the buttons information */
+=======
 /* style page of the booking page that enhance the webpag */
+main
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +27,7 @@ button {
     padding: 0 20px;
 }
 
-/* Header Styles */
+/*head style */
 header {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
