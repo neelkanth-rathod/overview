@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Payment method selection
-    const paymentMethods = document.querySelectorAll('.payment-method');
-    
-    paymentMethods.forEach(method => {
-        method.addEventListener('click', function() {
-            paymentMethods.forEach(m => m.classList.remove('active'));
-            this.classList.add('active');
-        });
+    // Toggle hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
     });
     
     // Form validation
@@ -139,16 +136,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // In a real app, this would go back to the previous step or page
         window.location.href = 'index.html';
     });
-    
-    // Mobile menu that change be toggle.
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const authButtons = document.querySelector('.auth-buttons');
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            authButtons.classList.toggle('active');
-        });
-    }
 });
