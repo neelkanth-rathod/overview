@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Payment method selection
+    // Payment method selection for the webpage
     const paymentMethods = document.querySelectorAll('.payment-method');
     
     paymentMethods.forEach(method => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form validation
+    // Form validation requiried for the processes
     const form = document.getElementById('passengerForm');
     
     form.addEventListener('submit', function(e) {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Validate payment info if credit card is selected
+        // Validate payment 
         const activePayment = document.querySelector('.payment-method.active');
         
         if (activePayment && activePayment.textContent.includes('Credit Card')) {
