@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+main
     // Payment method selection for the webpage
     const paymentMethods = document.querySelectorAll('.payment-method');
     
@@ -7,6 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
             paymentMethods.forEach(m => m.classList.remove('active'));
             this.classList.add('active');
         });
+
+    // Toggle hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+main
     });
     
     // Form validation requiried for the processes
@@ -88,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // If all validations pass, proceed to payment
         alert('Booking submitted successfully!');
-        // In a real app, you would redirect to payment page or process payment here
     });
     
     function showError(input, message) {
@@ -123,8 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         e.target.value = value;
     });
-    
-    // Format expiry date input
     const expiryDate = document.getElementById('expiryDate');
     
     expiryDate.addEventListener('input', function(e) {
@@ -135,23 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
         e.target.value = value;
     });
     
-    // Back button functionality
+    // Back button function will do better tasks.
     const backBtn = document.querySelector('.back-btn');
     
     backBtn.addEventListener('click', function() {
         // In a real app, this would go back to the previous step or page
         window.location.href = 'index.html';
     });
-    
-    // Mobile menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const authButtons = document.querySelector('.auth-buttons');
-    
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            authButtons.classList.toggle('active');
-        });
-    }
 });
