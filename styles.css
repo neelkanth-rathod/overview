@@ -1,4 +1,4 @@
-/* Global Styles */
+/* style page of the booking page that enhance the webpag */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +9,7 @@
 body {
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
+    background-color: #f9f9
 
 button {
     cursor: pointer;
